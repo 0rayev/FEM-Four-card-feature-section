@@ -24,7 +24,7 @@
     
     --fc-darkBlue: hsl(234, 12%, 34%);
     --fc-grayishBlue: hsl(229, 6%, 66%);
-    /* --fc-lightGray: hsl(0, 0%, 98%);  */
+    --fc-lightGray: hsl(0, 0%, 98%); 
 } 
 
 *, 
@@ -39,6 +39,7 @@
 }
 
 body {
+    background-color: var(--fc-lightGray);
     font-family: var(--ff-primary);
     font-size: var(--fs-400);
     font-weight: var(--fw-normal);
@@ -131,10 +132,6 @@ header p {
         'karma'
         'calculator';
     }
-
-    /* h1 {
-        font-size: var(--fs-600-mobile);
-    } */
 }
 
 @media (max-width: 455px) {
