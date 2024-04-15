@@ -45,7 +45,6 @@ body {
     font-weight: var(--fw-normal);
     color: var(--fc-grayishBlue);
     margin-inline: auto;
-    min-width: 25rem;
 }
 
 h1 {
@@ -72,15 +71,20 @@ header {
     margin: 4rem auto;
 }
 header p {
-    width: 80%;
+    max-width: 500px;
+    margin-inline: auto;
     margin: 1rem auto;
     font-size: var(--fs-400);
 }
 
 .tools-grid {
+    border: 1px solid red;
+    max-width: 1100px;
+    padding-inline: 2rem;
+    margin-inline: auto;
     display: grid;
     justify-content: center;
-    grid-auto-columns: 20rem;
+    grid-auto-columns: 1fr;
     gap: 1.5rem;
     grid-template-areas: 
         '. teamBuilder .'
@@ -100,7 +104,10 @@ header p {
     margin-top: 0.4em;
 }
 .tool img {
-    margin: 2.3rem 0 0 12.7rem;
+    display: block;
+    margin-top: 2.3rem;
+    margin-left: auto;
+
 }
 
 .supervisor {
@@ -123,8 +130,7 @@ header p {
     border-top: 0.3rem solid var(--clr-blue);
     box-shadow: 0 0.9375rem 0.9375rem 0.375rem var(--clr-shadow);
 }
-
-@media (max-width: 1004px) {
+@media (max-width: 600px) {
     .tools-grid {
         grid-template-areas: 
         'supervisor'
@@ -132,9 +138,6 @@ header p {
         'karma'
         'calculator';
     }
-}
-
-@media (max-width: 455px) {
     h1 {
         font-size: var(--fs-600-mobile);
     }
